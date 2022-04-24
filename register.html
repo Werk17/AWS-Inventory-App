@@ -38,11 +38,11 @@
             <a class="navbar-brand" href="index.html">AWS Inventory App</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Option</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <!-- <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
             <li><a href="signin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
     </div>
@@ -60,19 +60,15 @@
                 <h3 class="panel-title">No Cognito User Pool Configured</h3>
             </div>
             <div class="panel-body">
-                <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this
-                    in Module 2 of the workshop.</p>
+                <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>.</p>
             </div>
         </div>
     </div>
 
-    <header>
-        <img src="images/logo.png">
-    </header>
 
     <section class="form-wrap">
         <h1>Register</h1>
-        <form id="registrationForm">
+        <form id="registrationForm" action="" method="post">
             <input type="email" id="emailInputRegister" placeholder="Email" pattern=".*" required>
             <input type="password" id="passwordInputRegister" placeholder="Password" pattern=".*" required>
             <input type="password" id="password2InputRegister" placeholder="Confirm Password" pattern=".*" required>

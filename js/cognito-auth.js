@@ -13,8 +13,8 @@ var InventoryApp = window.InventoryApp || {};
     var userPool;
 
     if (!(_config.cognito.userPoolId &&
-          _config.cognito.userPoolClientId &&
-          _config.cognito.region)) {
+        _config.cognito.userPoolClientId &&
+        _config.cognito.region)) {
         $('#noCognitoMessage').show();
         return;
     }
@@ -122,12 +122,21 @@ var InventoryApp = window.InventoryApp || {};
             function signinSuccess() {
                 console.log('Successfully Logged In');
                 window.location.href = 'index.html';
+
+                // if (cognitoUser != null) {
+                //     document.getElementById("Welcome").innerHTML().val("Signed in Successfully!");
+                // } else {
+                //     document.getElementById("Welcome").innerHTML().val("Welcome, please sign in to continue");
+                // }
+
             },
             function signinError(err) {
                 alert(err);
             }
         );
     }
+
+
 
     function handleRegister(event) {
         var email = $('#emailInputRegister').val();
